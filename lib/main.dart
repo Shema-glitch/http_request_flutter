@@ -17,6 +17,7 @@ class HttpApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
+      theme: ThemeData(brightness: Brightness.dark),
     );
   }
 }
@@ -71,7 +72,7 @@ class _HomePageState extends State<HomePage> {
                   return Container(
                     margin: EdgeInsets.all(5),
                     decoration: BoxDecoration(
-                      color: Colors.brown[100],
+                      color: const Color.fromARGB(255, 36, 36, 36),
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                     child: Padding(
