@@ -82,11 +82,16 @@ class _HomePageState extends State<HomePage> {
                             title: Text(users[index]['name']),
                             subtitle: Text(users[index]['email'])
                           ),
-                          Row(
-                            children: [
-                              ElevatedButton(onPressed: () {}, child: Icon(Icons.edit)),
-                              ElevatedButton(onPressed: () {}, child: Icon(Icons.delete)),
-                            ],
+                          Container(
+                            margin: EdgeInsets.all(10),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                ElevatedButton(onPressed: () {}, child: Icon(Icons.edit)),
+                                SizedBox(width: 10),
+                                ElevatedButton(onPressed: () {}, child: Icon(Icons.delete)),
+                              ],
+                            ),
                           )
                         ],
                       ),
