@@ -76,9 +76,19 @@ class _HomePageState extends State<HomePage> {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.only(top: 15.0),
-                      child: ListTile(
-                        title: Text(users[index]['name']),
-                        subtitle: Text(users[index]['email'])
+                      child: Column(
+                        children: [
+                          ListTile(
+                            title: Text(users[index]['name']),
+                            subtitle: Text(users[index]['email'])
+                          ),
+                          Row(
+                            children: [
+                              ElevatedButton(onPressed: () {}, child: Icon(Icons.edit)),
+                              ElevatedButton(onPressed: () {}, child: Icon(Icons.delete)),
+                            ],
+                          )
+                        ],
                       ),
                     ),
                   );
